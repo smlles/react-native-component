@@ -4,7 +4,7 @@ import { Pressable,Text } from "react-native";
 //자식컴포넌트로 데이터 전달하는 방식
 // 1. 부모 컴포넌트에서 자식을 사용하면서 속성으로 전달하기
 // 2. 컴포넌트 태그 사이에 값을 입력해서 전달하는 방법
-const MyButton=({title="기본버튼",children})=>{
+const MyButton=({title="기본버튼",children,onPress})=>{
   // default가 안되면, 구조분해할당으로 기본값 부여
   MyButton.defaultProps={
     title:'Button'
@@ -25,7 +25,8 @@ const MyButton=({title="기본버튼",children})=>{
         margin:10,
         borderRadius:8,
       }}
-      onPress={()=>{alert("Click!")}}>
+      onPress={onPress}
+      >
       <Text style={{fontSize:24}}>{title}</Text>
     </Pressable>
   )
