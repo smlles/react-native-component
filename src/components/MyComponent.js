@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { Pressable,Text } from "react-native";
 //let props = {"title":"button"}
 //자식컴포넌트로 데이터 전달하는 방식
@@ -9,10 +10,12 @@ const MyButton=({title="기본버튼",children})=>{
     title:'Button'
   }
   // 타이틀에는 문자열이 넘어오는데, propstypes를 이용해
-  // 전달되어야 하는 값의 타입이 숫자여야안다고 지정
+  // 전달되어야 하는 값의 타입이 숫자여야한다고 지정
   MyButton.propTypes ={
-    title : PropTypes.number
+    title : PropTypes.string.isRequired,
+    name : PropTypes.string.isRequired
   }
+  // 문제, 이게 최신 RN환경에서 작동 안할수도 있음
   // console.log(props)
   return(
     <Pressable

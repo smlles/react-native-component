@@ -27,7 +27,7 @@ const App=()=>{
       <MyButton title="button"/>
       {/* 컴포넌트 태그 사이에 전달된 값은
       컴포넌트의  props에서 children으로 전달된다 */}
-      <MyButton title="button">
+      <MyButton title="그거">
         Children Props
       </MyButton>
        <MyButton />
